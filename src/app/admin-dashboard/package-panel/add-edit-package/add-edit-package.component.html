@@ -1,0 +1,21 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">Package Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="PackageName" placeholder="Enter Package Name">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Price</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Price" placeholder="Enter Package Name">
+    </div>
+</div>
+
+
+<button (click)="addPackage()" *ngIf="package.PackageId==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updatePackage()" *ngIf="package.PackageId!=0" class="btn btn-primary">
+    Update
+</button>

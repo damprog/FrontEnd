@@ -1,0 +1,23 @@
+.package-desc {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.product-img {
+    margin-bottom: 30px;
+}
+
+.product-desc {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.product-header {
+    font-weight: bold;
+}
+
+.assume {
+    color: green;
+}
+
+

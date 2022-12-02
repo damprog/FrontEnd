@@ -1,0 +1,11 @@
+
+ <label class="col-sm-2 col-form-label">Nazwa użytkownika</label>
+ <div class="col-sm-10">
+     <input type="text" class="form-control" [(ngModel)]="login" placeholder="Wpisz nazwę użytkownika lub e-mail">
+ </div>
+ <label class="col-sm-2 col-form-label">Hasło</label>
+ <div class="col-sm-10">
+     <input type="password" class="form-control" [(ngModel)]="password" placeholder="Wpisz hasło">
+ </div>
+
+<button type="button" class="btn btn-primary mt-3" (click)="checkLogin()">Zaloguj</button>

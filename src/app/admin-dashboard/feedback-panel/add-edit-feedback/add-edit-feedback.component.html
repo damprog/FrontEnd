@@ -1,0 +1,26 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Email" placeholder="Enter Email">
+    </div>
+
+    <label class="col-sm-2 col-form-label">UserId</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="UserId" placeholder="Enter UserId">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Content</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Content" placeholder="Enter Content">
+    </div>
+</div>
+
+
+<button (click)="addFeedback()" *ngIf="feedback.FeedbackId==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateFeedback()" *ngIf="feedback.FeedbackId!=0" class="btn btn-primary">
+    Update
+</button>

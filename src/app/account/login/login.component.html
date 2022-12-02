@@ -1,0 +1,82 @@
+<div class="mt-4"></div>
+<div class="container ">
+
+  <h1>Witaj {{UserName}}!</h1>
+  <h2 *ngIf="!loggedIn"> Zaloguj się aby uzyskać więcej możliwości.</h2>
+
+  <h2 *ngIf="loggedIn">Teraz możesz korzystać z wszytskich dostępnych funkcji.</h2>
+
+
+
+
+
+
+    <!-- Button trigger modal - logowanie -->
+<button type="button" class="btn btn-primary float-right m2"
+data-bs-toggle="modal" data-bs-target="#exampleModal"
+(click)="loginClick()"
+data-keyboard="false" data-backdrop="static" *ngIf="!loggedIn">
+   Zaloguj
+ </button>
+ 
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-xl">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h2 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h2>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeClick()">
+         </button>
+       </div>
+       <div class="modal-body">
+         <app-login-form *ngIf="ActivateLoginFormComp"></app-login-form>
+          <p></p>
+         <span class="">   Nie posiadasz konta?   </span>
+         <button type="button" class="btn-primary"
+          data-bs-toggle="modal" data-bs-target="#exampleModal1"
+          (click)="registerClick()"
+          data-keyboard="false" data-backdrop="static">
+            Zarejestruj się
+          </button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+ <div class="mt-4"></div>
+
+    <!-- Button trigger modal - logowanie -->
+    <button type="button" class="btn btn-primary float-right" 
+    data-bs-toggle="modal" data-bs-target="#exampleModal1"
+    (click)="registerClick()"
+    data-keyboard="false" data-backdrop="static" *ngIf="!loggedIn">
+       Zarejestruj
+     </button>
+     
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-dialog-centered modal-xl">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h2 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h2>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeClick()">
+             </button>
+           </div>
+           <div class="modal-body">
+             <app-register *ngIf="ActivateRegisterComp"></app-register>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <div *ngIf="loggedIn">
+      <button class="btn btn-primary" (click)="logoutClick()">
+        Wyloguj
+      </button>
+      <a routerLink="/admin">
+      <button class="btn btn-primary ms-5" *ngIf="User.Admin">
+        Admin dashboard
+      </button></a>
+    </div>
+    </div>

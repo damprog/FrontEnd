@@ -1,0 +1,158 @@
+<section class="package-desc">
+<div *ngIf="!paidFor">
+  <div class="container">
+  <h1 class="product-header">Pakiet {{product.packageName}} - ${{ product.price }}</h1>
+
+  <div class="card" style="margin: 0 auto; width: 18rem; margin-bottom: 40px; margin-top:40px;">
+    <div class="card-header">
+      <b>Zawartość pakietu</b>
+    </div>
+
+    <ul class="list-group list-group-flush"  *ngIf="product.packageName==='Podstawowy'">
+      <li class="list-group-item">+ Plan treningowy</li>
+      <li class="list-group-item">- Dieta</li>
+      <li class="list-group-item">- Konsultacje</li>
+    </ul>
+
+    <ul class="list-group list-group-flush"  *ngIf="product.packageName==='Rozszerzony'">
+      <li class="list-group-item">+ Plan treningowy</li>
+      <li class="list-group-item">+ Dieta</li>
+      <li class="list-group-item">- Konsultacje</li>
+    </ul>
+
+    <ul class="list-group list-group-flush"  *ngIf="product.packageName==='Rozszerzony+'">
+      <li class="list-group-item">+ Plan treningowy</li>
+      <li class="list-group-item">+ Dieta</li>
+      <li class="list-group-item">+ Konsultacje</li>
+    </ul>
+
+  </div>
+
+  <p class="product-desc">{{product.description}}</p>
+  </div>
+  <!-- <img class="product-img" width="400" [src]="product.img"> -->
+
+</div>
+
+
+<div *ngIf="paidFor">
+<h1 class="assume">Gratulacje, kupiłeś pakiet "{{product.packageName}}"</h1>
+<h1 class="assume">Powodzenia i Be Healty!!!</h1>
+
+</div>
+
+
+<div #paypal></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div id="smart-button-container">
+        <div style="text-align: center;">
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb-p7whf16259456@business.example.com&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script type="text/javascript">
+      function initPayPalButton() {
+        paypal.Buttons({
+          style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'paypal',
+            
+          },
+  
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{"description":"Pakiet podstawowy","amount":{"currency_code":"EUR","value":17.99}}]
+            });
+          },
+  
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+              
+              // Full available details
+              console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+  
+              // Show a success message within this page, e.g.
+              const element = document.getElementById('paypal-button-container');
+              element.innerHTML = '';
+              element.innerHTML = '<h3>Thank you for your payment!</h3>';
+  
+              // Or go to another URL:  actions.redirect('thank_you.html');
+              
+            });
+          },
+  
+          onError: function(err) {
+            console.log(err);
+          }
+        }).render('#paypal-button-container');
+      }
+      initPayPalButton();
+    </script>
+
+
+<div id="smart-button-container">
+    <div style="text-align: center;">
+      <div id="paypal-button-container"></div>
+    </div>
+  </div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb-p7whf16259456@business.example.com&enable-funding=venmo&currency=EUR" data-sdk-integration-source="button-factory"></script>
+<script>
+  function initPayPalButton() {
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal',
+        
+      },
+
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{"description":"Pakiet podstawowy","amount":{"currency_code":"EUR","value":17.99}}]
+        });
+      },
+
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          
+          // Full available details
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+          // Show a success message within this page, e.g.
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+          // Or go to another URL:  actions.redirect('thank_you.html');
+          
+        });
+      },
+
+      onError: function(err) {
+        console.log(err);
+      }
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+</script> -->

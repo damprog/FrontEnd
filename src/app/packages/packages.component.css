@@ -1,0 +1,122 @@
+* {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  section {
+      margin-top: 30px;
+      display: block;
+  }
+  
+  .cards{
+      display: block;
+      z-index: 1;
+  }
+
+.card {
+  background: rgb(71, 68, 68);
+  display: inline-block;
+  margin: 25px 8px 0;
+  max-width: 300px;
+  perspective: 1000;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+    color: white;
+  }
+
+  .price {
+      display: inline-block;
+      font-size: large;
+
+  }
+
+  mat-card-actions {
+      text-align: center;
+      margin-left: 8px;
+  }
+
+  mat-card-title {
+      font-size: 1.8rem;
+  }
+
+  .package-contents {
+      text-align: left;
+      padding: 1rem 0 0 3rem;
+  }
+
+.description {
+    margin: 30px;
+}
+.description p {
+    text-align: left;
+    font-size: 1.2rem;
+    margin:1% 4%;
+    padding: 2% 2%;
+    border:rgb(71, 68, 68) solid 4px;
+    border-radius: 5%;
+}
+
+
+/* od tego wkleilem */
+
+h1 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+
+h2, h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  body {
+    margin: 0;
+  }
+
+  body, input[type="text"], button {
+      color: #333;
+      font-family: Cambria, Georgia, serif;
+      opacity: 0.9;
+  }
+
+  button {
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+
+  button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+  }
+
+ @media screen and (max-width: 600px){
+   .card{
+     width: 90%
+   }
+
+   .description p {
+    text-align: left;
+    font-size: 1.2rem;
+    margin:2% 2%;
+    padding: 3% 3%;
+    border:rgb(71, 68, 68) solid 4px;
+    border-radius: 5%;
+}
+ }

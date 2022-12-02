@@ -1,0 +1,28 @@
+/* AppComponent's private CSS styles */
+
+h1 {
+    margin-bottom: 0;
+    text-align: center;
+    background-color: #f7f6f6;
+  }
+ 
+  /* app-nav {
+    z-index: 10;
+    position: fixed;
+    margin: 0;
+  } */
+  .section-1 {
+    margin-top: 80px;
+}
+
+  /* app-footer {
+    bottom: 0;
+    margin-top: 5rem;
+    position: fixed;
+    width: 100%;
+    margin-left: 0;
+    float: left;
+    display: block;
+    
+    z-index: 10;
+  } */

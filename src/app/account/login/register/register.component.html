@@ -1,0 +1,28 @@
+
+
+
+    <label class="col-sm-2 col-form-label">* Nazwa użytkownika</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="UserName" placeholder="Podaj nazwę użytkownika">
+    </div>
+
+    <!-- <label class="col-sm-2 col-form-label">Link do zdjęcia</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="PhotoFileName" placeholder="Podaj link do zdjęcia">
+    </div> -->
+
+     <label class="col-sm-2 col-form-label">Podaj adres e-mail</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Email" placeholder="Podaj adres e-mail">
+    </div>
+
+    <label class="col-sm-2 col-form-label">* Hasło</label>
+    <div class="col-sm-10">
+        <input type="password" class="form-control" [(ngModel)]="Password" placeholder="Podaj hasło">
+    </div>
+    <h5 style="color:rgb(209, 54, 54);"> * - pola wymagane </h5>
+
+
+<button class="btn btn-primary mt-3" (click)="addUser()">
+    Zarejestruj
+</button>
